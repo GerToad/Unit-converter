@@ -157,8 +157,8 @@ public class Convertidor extends JFrame implements ActionListener{
       Convertidor app = new Convertidor();
       app.setVisible(true);
       app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      //app.setResizable(false);
-      //app.setLocationRelativeTo(null);
+      app.setResizable(false);
+      app.setLocationRelativeTo(null);
    }
 
 }
