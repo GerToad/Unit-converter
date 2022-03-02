@@ -1,16 +1,23 @@
+package src;
+
 import java.awt.*;        // Using AWT container and component classes
 import java.awt.event.*;  // Using AWT event classes and listener interfaces
 import javax.swing.*;
+import java.util.*;
 
 public class Convertidor extends JFrame implements ActionListener{
    private Label lblTitle, lblConvert, lblDe, lblA, lblRslt;    // Declare a Label component
    private TextField tfCount, tfRslt; // Declare a TextField component
    private Button btnCount, btnClose;   // Declare a Button component
    private JComboBox combox, cbDe, cbA;
-   private String[] medidas = {"Longitud", "Moneda"},
-           lon = {"Kilometros", "Millas", "Yardas"},
-           money = {"Dolares", "Pesos", "Euros"};
-   private int count = 0;     // Counter's value
+   private String[] medidas = {"Longitud", "Superficie", "Volumen", "Peso", "Velocidad", "Temperatura"},
+           lon = {"Kilometros", "Millas", "Yardas", "Centimetros", "Milimetros", "Pies", "Pulgadas"},
+           superficie = {"K. cuadrados", "M. cuadradas", "Hectareas", "Acres", "Mtr. cuadrados", "Pies cuadrados"},
+           volumen = {"Metro cubico", "Barril", "Litro", "Galon", "C. cubico", "Pinta", "Mililitro", "Onza liquida"},
+           peso = {"Tonelada", "T. corta", "Kilogramo", "Libra", "Gramo", "Onza"},
+           velocidad = {"Km/s", "Milla/s", "m/s", "Milla/hr", "Km/hr", "Pie/s"},
+           temperatura = {"Celsius", "Fahrenheit", "Kelvin"};
+
 
    public Convertidor(){
       //setLayout(new FlowLayout());
@@ -134,18 +141,58 @@ public class Convertidor extends JFrame implements ActionListener{
 
       if(e.getSource() == combox){
          if(combox.getSelectedItem() == "Longitud"){
-            tfRslt.setText("Hallo");
+            //tfRslt.setText("Hallo");
             cbDe.removeAllItems();
             cbA.removeAllItems();
             for(String item : lon){
                cbDe.addItem(item);
                cbA.addItem(item);
             }
-         }else{
-            tfRslt.setText("Welt");
+         }
+         if(combox.getSelectedItem() == "Moneda"){
             cbDe.removeAllItems();
             cbA.removeAllItems();
             for(String item : money){
+               cbDe.addItem(item);
+               cbA.addItem(item);
+            }
+         }
+         if(combox.getSelectedItem() == "Superficie"){
+            cbDe.removeAllItems();
+            cbA.removeAllItems();
+            for(String item : superficie){
+               cbDe.addItem(item);
+               cbA.addItem(item);
+            }
+         }
+         if(combox.getSelectedItem() == "Volumen"){
+            cbDe.removeAllItems();
+            cbA.removeAllItems();
+            for(String item : volumen){
+               cbDe.addItem(item);
+               cbA.addItem(item);
+            }
+         }
+         if(combox.getSelectedItem() == "Peso"){
+            cbDe.removeAllItems();
+            cbA.removeAllItems();
+            for(String item : peso){
+               cbDe.addItem(item);
+               cbA.addItem(item);
+            }
+         }
+         if(combox.getSelectedItem() == "Velocidad"){
+            cbDe.removeAllItems();
+            cbA.removeAllItems();
+            for(String item : velocidad){
+               cbDe.addItem(item);
+               cbA.addItem(item);
+            }
+         }
+         if(combox.getSelectedItem() == "Temperatura"){
+            cbDe.removeAllItems();
+            cbA.removeAllItems();
+            for(String item : temperatura){
                cbDe.addItem(item);
                cbA.addItem(item);
             }
