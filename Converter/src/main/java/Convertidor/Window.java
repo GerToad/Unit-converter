@@ -103,6 +103,7 @@ public class Window extends JFrame implements ActionListener{
 	 Velocidad unitV = new Velocidad();
 	 Volumen unitVol = new Volumen();
 	 Peso unitP = new Peso();
+	 Temperatura unitT = new Temperatura();
 
 	      for (String a : lon) {
 		      if (cbDe.getSelectedItem() == "Kilometros" && cbA.getSelectedItem() == a) {
@@ -215,6 +216,18 @@ public class Window extends JFrame implements ActionListener{
 		      }
 		      if (cbDe.getSelectedItem() == "Onza" && cbA.getSelectedItem() == a) {
 			      rslt = unit * unitP.getOnz(a);
+		      }
+	      }
+
+	      for (String a : temperatura) {
+		      if (cbDe.getSelectedItem() == "Celsius" && cbA.getSelectedItem() == a) {
+			      rslt = unit * unitT.getCel(a);
+		      }
+		      if (cbDe.getSelectedItem() == "Fahrenheit" && cbA.getSelectedItem() == a) {
+			      rslt = unit * unitT.getFah(a);
+		      }
+		      if (cbDe.getSelectedItem() == "Kelvin" && cbA.getSelectedItem() == a) {
+			      rslt = unit * unitT.getKel(a);
 		      }
 	      }
 
