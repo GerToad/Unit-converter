@@ -10,7 +10,7 @@ package Convertidor;
  */
 import java.util.*;
 
-public class Unit {
+public class Longitud {
 
 	private Map<String, Double> kilo = new HashMap<>();
 	private Map<String, Double> mile = new HashMap<>();
@@ -20,7 +20,8 @@ public class Unit {
 	private Map<String, Double> feet = new HashMap<>();
 	private Map<String, Double> inch = new HashMap<>();
 
-	public Unit() {
+	public Longitud() {
+		kilo.put("Kilometros", 1.00);
 		kilo.put("Millas", 0.62);
 		kilo.put("Yardas", 1093.61);
 		kilo.put("Centimetros", 100000.0);
