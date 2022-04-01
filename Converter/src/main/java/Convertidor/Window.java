@@ -27,7 +27,7 @@ public class Window extends JFrame implements ActionListener{
 
       lblTitle = new Label("Convertidor");
       lblTitle.setBounds(240,10,110,30);
-      lblTitle.setFont(new Font("Andale Mono", 1, 18));
+      lblTitle.setFont(new Font("Consolas", 1, 18));
       add(lblTitle);
 
       combox = new JComboBox(medidas);
